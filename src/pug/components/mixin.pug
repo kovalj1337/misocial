@@ -1,0 +1,21 @@
+-
+    let mainMenu = [
+        ["Home", "#"],
+        ["Why MISOCIAL", "#"],             
+        ["Features", "#"],             
+        ["Articles", "#"],             
+        ["Pricing", "#"],
+    ]
+mixin menu(mainMenu, color-theme="light")
+    .navigation 
+        .logo 
+            a(href="index.html")
+                img(src="img/logo.svg", alt="")
+                span(class=color-theme) misocial
+        nav.flex-between 
+            ul(class=color-theme).menu.flex-between
+                for item in mainMenu
+                    li 
+                        a(href=item[1]) #{item[0]}
+            p(class=color-theme).cta.cta-entry
+                a(href="#") get started 
