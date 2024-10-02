@@ -6,16 +6,89 @@
         ["Articles", "#"],             
         ["Pricing", "#"],
     ]
-mixin menu(mainMenu, color-theme="light")
+mixin menu(mainMenu, colorTheme="light")
     .navigation 
         .logo 
             a(href="index.html")
-                img(src="img/logo.svg", alt="")
-                span(class=color-theme) misocial
+                img(src="img/logo.svg" alt="")
+                span(class=colorTheme) misocial
         nav.flex-between 
-            ul(class=color-theme).menu.flex-between
+            ul(class=colorTheme).menu.flex-between
                 for item in mainMenu
                     li 
                         a(href=item[1]) #{item[0]}
-            p(class=color-theme).cta.cta-entry
-                a(href="#") get started 
+            p(class=colorTheme).cta.cta-entry
+                a.btn(href="#") get started 
+
+-
+    let cardsInfo = {
+        satelite: {
+            img: "img/satelite.svg",
+            alt: "",
+            personal: "personal",
+            curency: "$",
+            price: 0,
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            btnText: 'select plan',
+            href:'#',
+        },
+        mars:{
+            img: "img/mars.svg",
+            alt: "",
+            personal: "personal",
+            curency: "$",
+            price: 29,
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            btnText: 'select plan',
+            href:'#',
+        },
+        rocket:{
+            img: "img/rocket.svg",
+            alt: "",
+            personal: "personal",
+            curency: "$",
+            price: 49,
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            btnText: 'select plan',
+            href:'#',
+        },
+    }
+
+mixin card(oneCard)
+    figure.card-figure
+        figcaption
+            picture
+                img(src=oneCard.img, alt=oneCard.alt class="img")
+            p.personal #{oneCard.personal}
+            p.price
+                span.curency #{oneCard.curency}
+                b #{oneCard.price}
+                if oneCard.isMonth
+                    | /month
+                else
+                    | /year
+            ul.description 
+                for oneText in oneCard.description 
+                    li #{oneText}
+            a(href=oneCard.href) #{oneCard.btnText}  

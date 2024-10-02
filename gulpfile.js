@@ -89,9 +89,9 @@ export const files = () => {
 export const fonts = () => {
     return gulp 
     .src([
-        "src/fonts/**/*.*"
+        "src/font/**/*.*"
     ])
-    .pipe(gulp.dest("docs/fonts"))
+    .pipe(gulp.dest("docs/font"))
     .pipe(browserSync.reload({
         stream: true
     }))

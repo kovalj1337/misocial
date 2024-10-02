@@ -1,0 +1,15 @@
+@import components/mixin
+body
+    background-color: pink
+.light
+    .btn
+        color: #ffffff
+        +btn($fixed:false)
+.dark
+    .btn
+        color: #ffffff
+        +btn($fixed:false, $empty:true)
+.card-figure
+    a
+        color: #6e45e2
+        +btn()
