@@ -10,8 +10,15 @@ html(lang="en")
         header 
             .mainfon
                 +menu(mainMenu)
-            
+                .flex-between.infoflex
+                    .info
+                        p.socialMarketing social marketing & analytics
+                        p.pricingTable Pricing Table
+                        p.loremOne Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+                .arrow
+                    a(href="#footer")
+                        img(src="img/arrow.svg" alt="")                         
         main 
             +card(cardsInfo.satelite)
-        footer
+        footer#footer
             +menu(mainMenu, colorTheme= "dark")

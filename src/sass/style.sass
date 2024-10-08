@@ -1,12 +1,19 @@
 @import components/mixin
+*
+    margin: 0
+html
+    font-size: 1px
+    scroll-behavior: smooth
 body
     background-color: pink
-    margin: 0
+    font-family: "Maven Pro"
 .wrapper
-    max-width: 1820px
-    margin: 0 50px
+    max-width: 1820rem
+    margin: 0 50rem
 .flex-between
     display: flex
+    justify-content: center
+    align-items: center
 .light
     .btn
         color: #ffffff
@@ -22,23 +29,21 @@ body
 .logo
     display: flex
     span
-        font-size: 30px
-        letter-spacing: 6px
-        line-height: 29px
+        font-size: 30rem
+        letter-spacing: 6rem
+        line-height: 29rem
         color: #ffffff
         font-weight: 700
-        font-family: "Maven Pro"
         text-transform: uppercase
     a
         text-decoration: none
         align-items: center
 .mainfon
-    background: url(../img/fon.png) no-repeat center/cover
-    background-color: #24242b
-    min-height: 770px
+    +gradient("../img/fontwo.jpg")
+    min-height: 770rem
     margin: 0
 .navigation
-    padding: 50px
+    padding: 50rem
     display: flex
     justify-content: space-between
     li
@@ -46,10 +51,96 @@ body
         margin-right: 30px
         display: inline-block
     a
-        font-size: 16px
-        line-height: 19px
+        position: relative
+        display: flex
+        align-items: center
+        font-size: 16rem
+        line-height: 19rem
         color: #ffffff
         font-weight: 500
-        font-family: "Maven Pro"
         text-decoration: none
-
+.menu
+    a
+        &::after
+            content: ""
+            position: absolute
+            top: 0rem
+            left: 0
+            display: inline-block
+            height: 1em
+            width: 100%
+            border-bottom: 1px solid #ffffff
+            margin-top: 10px 
+            opacity: 0
+            transition: opacity 0.35s, transform 0.35s
+            transform: scale(0,1) 
+        &:hover::after
+            opacity: 1
+            transform: scale(1)
+.infoflex
+    min-height: 65vh
+.info
+    text-align: center
+.socialMarketing
+    position: relative
+    font-size: 14px
+    letter-spacing: 1px
+    line-height: 32px
+    text-transform: uppercase
+    color: #ffffff
+    font-weight: 700
+    &::before,
+    &::after
+        content: ""
+        position: absolute
+        top: 50%
+        width: 25rem
+        height: 1px
+        background-color: #fff
+        transform: translateY(-50%)
+    &::before
+        left: 15%
+    &::after
+        right: 15%
+.pricingTable
+    padding: 30px 0 22px
+    font-size: 86px
+    letter-spacing: -3px
+    line-height: 72px
+    color: #ffffff
+    font-weight: 500
+.loremOne
+    font-size: 16px
+    line-height: 28px
+    color: #ffffff
+    font-weight: 400
+    margin: 0 auto
+    max-width: 400px
+.arrow
+    position: relative
+    a
+        content: ""
+        position: absolute
+        top: 50%
+        left: 46%
+        width: 64px
+        transform: translateY(60%)
+        img
+            transition: all 0.5s ease
+        &:hover 
+            img
+                filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+                transform: scale(1.2)
+.card-figure
+    p,
+    li
+        font-size: 16px
+        line-height: 28px
+        color: #9fa4af
+        font-weight: 400
+.price
+    font-size: 60px
+    letter-spacing: -2px
+    line-height: 72px
+    color: #4f4f6f
+    font-weight: 500
