@@ -1,6 +1,12 @@
 @import components/mixin
 body
     background-color: pink
+    margin: 0
+.wrapper
+    max-width: 1820px
+    margin: 0 50px
+.flex-between
+    display: flex
 .light
     .btn
         color: #ffffff
@@ -13,3 +19,37 @@ body
     a
         color: #6e45e2
         +btn()
+.logo
+    display: flex
+    span
+        font-size: 30px
+        letter-spacing: 6px
+        line-height: 29px
+        color: #ffffff
+        font-weight: 700
+        font-family: "Maven Pro"
+        text-transform: uppercase
+    a
+        text-decoration: none
+        align-items: center
+.mainfon
+    background: url(../img/fon.png) no-repeat center/cover
+    background-color: #24242b
+    min-height: 770px
+    margin: 0
+.navigation
+    padding: 50px
+    display: flex
+    justify-content: space-between
+    li
+        list-style: none
+        margin-right: 30px
+        display: inline-block
+    a
+        font-size: 16px
+        line-height: 19px
+        color: #ffffff
+        font-weight: 500
+        font-family: "Maven Pro"
+        text-decoration: none
+
