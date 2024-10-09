@@ -2,7 +2,7 @@ doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport" content="width=device-width, uset-scalabel=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0")
         title Document
         link(rel="stylesheet", href="css/styles.css")
     body 
@@ -13,12 +13,36 @@ html(lang="en")
                 .flex-between.infoflex
                     .info
                         p.socialMarketing social marketing & analytics
-                        p.pricingTable Pricing Table
+                        h1.pricingTable Pricing Table
                         p.loremOne Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
                 .arrow
                     a(href="#footer")
                         img(src="img/arrow.svg" alt="")                         
         main 
-            +card(cardsInfo.satelite)
+            section 
+                .selectplan.flex-between
+                    .infotwo
+                        p.misocialtext misocial
+                        h2.selectplantext Select a Plan
+                        p.loremtwo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                .cards.flex-between
+                    +card(cardsInfo.satelite)
+                    +card(cardsInfo.mars)
+                    +card(cardsInfo.rocket)
+            section
+                .control.flexbetween
+                    p.socialmartketing socal marketing & analytics
+                    h2.takecontrol Take control of your data
+                    .buttons.flex-between
+                        a(href="#").getstarted get started
+                        a(href="#").explore explore features
         footer#footer
             +menu(mainMenu, colorTheme= "dark")
+            hr
+            .footer
+                p &copy 2017 Mass Impressions & Tranmautritam. Make the right impression.
+                ul.socialmedia
+                    li 
+                    li 
+                    li
+                    li 

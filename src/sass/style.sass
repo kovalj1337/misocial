@@ -1,46 +1,57 @@
 @import components/mixin
 *
     margin: 0
+    padding: 0
 html
     font-size: 1px
     scroll-behavior: smooth
 body
-    background-color: pink
     font-family: "Maven Pro"
+header
+    margin-bottom: 121px
+a
+    text-decoration: none
 .wrapper
-    max-width: 1820rem
+    max-width: 80%
     margin: 0 50rem
 .flex-between
     display: flex
     justify-content: center
     align-items: center
 .light
+    font-size: 30rem
+    letter-spacing: 6rem
+    line-height: 29rem
+    color: #ffffff
+    font-weight: 700
+    text-transform: uppercase
     .btn
         color: #ffffff
         +btn($fixed:false)
-.dark
-    .btn
-        color: #ffffff
-        +btn($fixed:false, $empty:true)
+nav 
+    p.dark
+        a.btn
+            color: #ffffff
+            +btn($fixed:false, $empty:true)
 .card-figure
     a
         color: #6e45e2
         +btn()
 .logo
-    display: flex
-    span
-        font-size: 30rem
-        letter-spacing: 6rem
-        line-height: 29rem
-        color: #ffffff
+    span.dark
+        font-size: 30px
+        letter-spacing: 6px
+        line-height: 29px
+        color: #37374a
         font-weight: 700
         text-transform: uppercase
     a
-        text-decoration: none
+        display: flex
         align-items: center
+        gap: 17px
 .mainfon
+    position: relative
     +gradient("../img/fontwo.jpg")
-    min-height: 770rem
     margin: 0
 .navigation
     padding: 50rem
@@ -50,33 +61,39 @@ body
         list-style: none
         margin-right: 30px
         display: inline-block
-    a
-        position: relative
-        display: flex
-        align-items: center
-        font-size: 16rem
-        line-height: 19rem
-        color: #ffffff
-        font-weight: 500
-        text-decoration: none
-.menu
-    a
-        &::after
-            content: ""
-            position: absolute
-            top: 0rem
-            left: 0
-            display: inline-block
-            height: 1em
-            width: 100%
-            border-bottom: 1px solid #ffffff
-            margin-top: 10px 
-            opacity: 0
-            transition: opacity 0.35s, transform 0.35s
-            transform: scale(0,1) 
-        &:hover::after
-            opacity: 1
-            transform: scale(1)
+    nav
+        .light
+            a
+                color: #ffffff
+        .dark
+            a
+                color: #37374a
+    .menu
+        a
+            position: relative
+            display: flex
+            align-items: center
+            font-size: 16rem
+            line-height: 19rem
+            font-weight: 500
+            text-transform: none
+            letter-spacing: 1px
+            &::after
+                content: ""
+                position: absolute
+                top: 0rem
+                left: 0
+                display: inline-block
+                height: 1em
+                width: 100%
+                border-bottom: 1px solid #ffffff
+                margin-top: 10px 
+                opacity: 0
+                transition: opacity 0.35s, transform 0.35s
+                transform: scale(0,1) 
+            &:hover::after
+                opacity: 1
+                transform: scale(1)
 .infoflex
     min-height: 65vh
 .info
@@ -117,20 +134,17 @@ body
     margin: 0 auto
     max-width: 400px
 .arrow
-    position: relative
-    a
-        content: ""
-        position: absolute
-        top: 50%
-        left: 46%
-        width: 64px
-        transform: translateY(60%)
+    position: absolute
+    bottom: 0
+    left: 50%
+    width: 64px
+    transform: translateX(-50%)
+    img
+        transition: all 0.5s ease
+    &:hover 
         img
-            transition: all 0.5s ease
-        &:hover 
-            img
-                filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
-                transform: scale(1.2)
+            filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+            transform: scale(1.2)
 .card-figure
     p,
     li
@@ -144,3 +158,90 @@ body
     line-height: 72px
     color: #4f4f6f
     font-weight: 500
+.selectplan
+    justify-content: center
+    text-align: center
+    padding-bottom: 100px 
+.misocialtext
+    font-size: 14px
+    letter-spacing: 1px
+    line-height: 32px
+    text-transform: uppercase
+    color: #9fa4af
+.selectplantext
+    font-size: 60px
+    letter-spacing: -2px
+    line-height: 72px
+    color: #4f4f6f
+    font-weight: 500
+.loremtwo
+    font-size: 16px
+    line-height: 28px
+    color: #9fa4af
+    font-weight: 400
+    max-width: 400px
+.cards
+    column-gap: 50px
+    justify-content: center
+    text-align: center
+    margin-bottom:120px
+    li
+        list-style: none
+.card-figure
+    padding: 72px 62px
+    border-radius: 30px
+    border: 1px solid #d7dbe8
+    background-color: #ffffff
+    min-height: 545px
+    min-width: 300px
+    box-sizing: border-box
+    transition: all 1s ease
+    &:hover
+        box-shadow: 0 0 46px 20px rgba(204,204,223,0.71)
+.picture
+    margin-bottom: 53px
+.personal
+    margin-bottom: 28px 
+.price
+    margin-bottom: 50px 
+    b
+        position: relative
+        font-size: 60px
+        letter-spacing: -2px
+        line-height: 72px
+        color: #4f4f6f
+        font-weight: 500
+    .curency
+        position: absolute
+        top: 0
+        left: -8px
+        font-size: 16px
+        letter-spacing: -1px
+        line-height: 51px
+        color: #4f4f6f
+        font-weight: 500
+.control
+    +gradient("../img/world.jpg")
+    justify-content: center
+    text-align: center
+    padding: 185px
+.description
+    margin-bottom: 54px 
+.socialmartketing
+    font-size: 14px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #ffffff
+    font-weight: 700
+.takecontrol
+    font-size: 60px
+    letter-spacing: -2px
+    color: #ffffff
+    font-weight: 500
+    padding: 18px
+.buttons
+    gap: 10px
+.getstarted
+    +btn($empty: true)
+.explore
+    +btn($fixed: true)

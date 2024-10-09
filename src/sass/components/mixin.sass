@@ -17,6 +17,7 @@
         box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
         background-color: #ffffff
         border: 1px solid #d7dbe8
+        color: #c2c9db
         &:hover
             color: #fff
             background-color: #6e45e2
@@ -29,9 +30,10 @@
             background-color: grey
 
     @if $empty != false
+        color: #FFF
         border-radius: 25px
         background-color: #6e45e2
-        border: 1px solid #d7dbe8
+        // border: 1px solid #d7dbe8
         &:hover
             color: #6e45e2
             border: 1px solid #6e45e2
@@ -39,3 +41,6 @@
 =gradient($url)
     background-color: #6959d5
     background: linear-gradient(-60deg, rgba(135, 211, 205, 0.85) 20%, rgba(109, 69, 225, 0.85) 80%), url(#{$url}) center/cover
+=media($size)
+    @media screen and (min-width: #{$size}px)
+        @content

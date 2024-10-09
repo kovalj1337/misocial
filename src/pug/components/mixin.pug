@@ -79,11 +79,11 @@ mixin card(oneCard)
     figure.card-figure
         figcaption
             picture
-                img(src=oneCard.img, alt=oneCard.alt class="img")
+                img.picture(src=oneCard.img, alt=oneCard.alt class="img")
             p.personal #{oneCard.personal}
             p.price
-                span.curency #{oneCard.curency}
                 b #{oneCard.price}
+                    span.curency #{oneCard.curency}
                 if oneCard.isMonth
                     | /month
                 else
