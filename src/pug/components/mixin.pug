@@ -7,13 +7,16 @@
         ["Pricing", "#"],
     ]
 mixin menu(mainMenu, colorTheme="light")
-    .navigation.wrapper 
+    .navigation(class=colorTheme).wrapper.flex-between
         .logo
             a(href="index.html")
                 img(src="img/logo.svg" alt="")
                 span(class=colorTheme) misocial
-        nav.flex-between 
-            ul(class=colorTheme).menu.flex-between
+        span.bord
+        nav.flex-between
+            ul(class=colorTheme).menu
+                li(class=colorTheme).cancel-burger 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill=""><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> 
                 for item in mainMenu
                     li 
                         a(href=item[1]) #{item[0]}

@@ -7,6 +7,7 @@ html(lang="en")
         link(rel="stylesheet", href="css/styles.css")
     body 
         include components/mixin.pug
+        .bgc-black
         header 
             .mainfon
                 +menu(mainMenu)
@@ -39,10 +40,15 @@ html(lang="en")
         footer#footer
             +menu(mainMenu, colorTheme= "dark")
             hr
-            .footer
-                p &copy 2017 Mass Impressions & Tranmautritam. Make the right impression.
-                ul.socialmedia
+            .footer.flex-between.wrapper
+                p.copyright &copy 2017 Mass Impressions & Tranmautritam. Make the right impression.
+                ul.socialmedia.flex-between
                     li 
-                    li 
+                        img(src="img/facebook.svg", alt="")
                     li
+                        img(src="img/twitter.svg", alt="")
+                    li
+                        img(src="img/google-plus.svg", alt="")
                     li 
+                        img(src="img/insta.svg", alt="")
+        script(src="js/scripts.js")
